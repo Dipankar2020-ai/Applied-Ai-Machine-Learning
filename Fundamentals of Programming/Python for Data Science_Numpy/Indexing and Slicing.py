@@ -1,0 +1,27 @@
+import numpy as np
+a=np.arange(10)
+print(a[5])
+a=np.diag([1,2,3])
+print(a[2,2])
+a[2,1]=5
+print(a)
+a=np.arange(10)
+print(a)
+print(a[1:8:2])
+a[5:]=10
+print(a)
+b=np.arange(5)
+a[5:]=b[::-1]
+print(a)
+b=a[::2]
+print(b)
+print(np.shares_memory(a,b))
+b[0]=10
+print(b)
+print(a)
+a=np.arange(10)
+c=a[::2].copy()
+print(np.shares_memory(a,c))
+c[0]=10
+print(c)
+print(a)
